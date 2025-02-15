@@ -1,0 +1,65 @@
+.tooltip {
+  z-index: 2;
+}
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+  white-space: nowrap;
+
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+
+  /* move to right */
+  left:100%;
+  margin-left:15px; /* and add a small left margin */
+
+  /* basic styles */
+  padding:5px 15px;
+  border-radius:10px;
+  background:#000;
+  color: #fff;
+  text-align:center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 600;
+
+  border-color: transparent black transparent transparent;
+
+  opacity:0;
+  transition: all .2s ease;
+  pointer-events: none;
+}
+
+.tooltip:after {
+  content:"";
+  position:absolute;
+
+  /* position tooltip correctly */
+  right:-15px;
+  margin-left:-5px;
+
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+
+  /* the arrow */
+  border:5px solid #000;
+  border-color: transparent black transparent transparent;
+
+  opacity:0;
+  transition: all .2s;
+}
+.tooltip:hover:before, .tooltip:hover:after {
+  display:block;
+  opacity:1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .tooltip:hover:before, .tooltip:hover:after {
+    display: none;
+  }
+}
