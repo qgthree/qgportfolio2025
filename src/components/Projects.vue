@@ -1,7 +1,22 @@
 <script setup>
-defineProps({
-  projects: Array
-})
+import Filters from './Filters.vue'
+import { useRoute } from 'vue-router';
+import { ref, watch } from 'vue';
+import { useProjectsStore } from '@/stores/projectsStore'
+
+const route = useRoute();
+const currentName = ref(route.name);
+
+const projects = () => {
+  return useProjectsStore().projects.filter(project => project.role.includes(currentName.value)).sort((a,b) => b.year - a.year);
+}
+
+watch(() => route.name,
+  (newName) => {
+    currentName.value = newName;
+  },
+  { deep: true }
+);
 
 const getImageUrl = (assetName) => {
   return new URL(`../assets/images/${assetName}`, import.meta.url).href
@@ -9,8 +24,9 @@ const getImageUrl = (assetName) => {
 </script>
 
 <template>
-  <div id="tl_items" v-if="projects">
-    <div class="tl_item" v-for="(project, index) in projects" :key="index">
+  <Filters filter1="designer" filter2="developer" filter3="advisor" />
+  <section id="tl_items" v-if="projects()">
+    <div class="tl_item" v-for="(project, index) in projects()" :key="index">
       <div class="details">
         <div class="details_left">
           <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + project.user.userImage + ')' }"></span>
@@ -20,27 +36,34 @@ const getImageUrl = (assetName) => {
           <span class="lighter">{{ project.year }}</span>
         </div>
         <div class="details_right">
-          <span class="material-symbols-outlined">more_vert</span>
         </div>
       </div>
       <h3>
         {{ project.title }}
       </h3>
-      <div class="project_banner" v-bind:style="{ backgroundImage: 'url(' + getImageUrl(project.banner) + ')' }"></div>
+      <a
+        class="project_banner"
+        role="img"
+        :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
+        :aria-label="project.banner.alt"
+      >
+      </a>
       <div class="details">
         <div class="details_left">
           <a v-for="(skill, index) in project.skills" class="details_button" :key="index">{{ skill }}</a>
         </div>
         <div class="details_right">
-          <span class="lighter"></span>
+          <span class="material-symbols-outlined lighter">favorite</span>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .project_banner {
+  display: block;
+  cursor: pointer;
   aspect-ratio: 16 / 9;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.1);

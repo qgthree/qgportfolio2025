@@ -11,40 +11,47 @@
 .tl_item > * {
   margin-bottom: 20px;
 }
-
 .details {
   display: grid;
   grid-template-columns: 1fr 30px;
   letter-spacing: 0.5px;
+  min-height: 30px;
 }
-
 .details_left, .details_right {
   display: flex;
   align-items: center;
 }
-
 .details_left {
   justify-content: flex-start;
 }
-.details_left .material-symbols-outlined {
-  font-size: 30px;
-  margin-right: 6px;
-}
-
-.details_right {
-  justify-content: flex-end;
-}
-.details_right .material-symbols-outlined {
-  font-variation-settings:
-  'opsz' 48;
-  font-size: 22px;
-}
-
-.userImage {
+.details_left .userImage {
   border-radius: 50%;
   height: 26px;
   width: 26px;
   background-position: center;
   background-size: cover;
   margin-right: 10px;
+}
+.details_right {
+  justify-content: center;
+}
+.details_right .material-symbols-outlined {
+  font-variation-settings:
+  'opsz' 48;
+  font-size: 22px;
+}
+.details_right .material-symbols-outlined {
+  cursor: pointer;
+  color: #e3572e;
+  transition: all 0.2s ease;
+}
+.details_right .material-symbols-outlined:hover {
+  font-size: 28px;
+}
+.details_right .material-symbols-outlined:active {
+  font-size: 22px;
+}
+.details_right .material-symbols-outlined.liked {
+  font-size: 24px;
+  font-variation-settings: 'FILL' 1;
 }

@@ -1,18 +1,15 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import urql, { cacheExchange, fetchExchange } from '@urql/vue';
 import App from './App.vue'
 import router from './router'
-
+import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar';
+import 'vue3-perfect-scrollbar/style.css';
 import './assets/css/app.css'
 
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(urql, {
-  url: 'http://localhost:4000/',
-  exchanges: [cacheExchange, fetchExchange]
-});
+app.use(PerfectScrollbarPlugin)
 
 app.mount('#app')

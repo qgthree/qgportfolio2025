@@ -1,17 +1,9 @@
-<script setup>
-  import Filters from '../../components/Filters.vue'
-  import Skills from '../../components/Skills.vue'
-</script>
+<script setup />
 
 <template>
   <div id="ProjectView" class="two-column">
     <div class="two-column_left">
-      <Filters filter1="designer" filter2="developer" filter3="advisor" />
-      <router-view v-slot="{ Component }" name="timeline">
-        <transition name="slide-up" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+      <router-view name="timeline" />
     </div>
     <div class="two-column_right">
     </div>

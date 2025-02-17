@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 const Explore = () => import('../views/primary/Explore.vue')
 const ProjectView = () => import('../views/secondary/ProjectView.vue')
-const Designer = () => import('../components/Designer.vue')
-const Developer = () => import('../components/Developer.vue')
-const Advisor = () => import('../components/Advisor.vue')
+const Projects = () => import('../components/Projects.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,21 +24,21 @@ const router = createRouter({
               path: '/projects/designer',
               name: 'designer',
               components: {
-                timeline: Designer
+                timeline: Projects
               }
             },
             {
               path: '/projects/developer',
               name: 'developer',
               components: {
-                timeline: Developer
+                timeline: Projects
               }
             },
             {
               path: '/projects/advisor',
               name: 'advisor',
               components: {
-                timeline: Advisor
+                timeline: Projects
               }
             }
           ]
