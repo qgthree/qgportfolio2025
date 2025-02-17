@@ -39,6 +39,7 @@
   font-variation-settings:
   'opsz' 48;
   font-size: 22px;
+  user-select: none;
 }
 .details_right .material-symbols-outlined {
   cursor: pointer;
