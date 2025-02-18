@@ -1,19 +1,11 @@
 <script setup>
-import Filters from '@/components/Filters.vue'
-import { useProjectsStore } from '@/stores/projectsStore'
-
 defineProps({
-  projects: Array,
-  role: String
+  Projects: Array
 })
-
-const getImageUrl = (assetName) => {
-  return new URL(`../assets/images/${assetName}`, import.meta.url).href
-}
 </script>
 
 <template>
-  <Filters filter1="all projects" filter2="designer" filter3="developer" filter4="advisor" :role="role" />
+  <Filters filter1="designer" filter2="developer" filter3="advisor" />
   <section id="tl_items">
     <transition-group name="tl_item" tag="div">
       <div class="tl_item" v-for="(project) in projects" :key="project.id">

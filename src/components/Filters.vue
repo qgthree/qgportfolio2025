@@ -1,24 +1,25 @@
 <script setup>
-  defineProps({
-    filter1: String,
-    filter2: String,
-    filter3: String,
-    filter4: String
-  })
+defineProps({
+  filter1: String,
+  filter2: String,
+  filter3: String,
+  filter4: String,
+  role: String
+})
 </script>
 
 <template>
   <div id="filters">
-    <router-link class="filter" :to="{ name: filter1 }" tag="span">
+    <router-link class="filter" :to="{ name: 'projects' }" :class="{ 'active': !role }">
       {{ filter1 }}
     </router-link>
-    <router-link v-if="filter2" class="filter" :to="{ name: filter2 }" tag="span">
+    <router-link v-if="filter2" class="filter" :to="{ name: 'projects', query: {role: filter2} }" :class="{ 'active': role === filter2 }">
       {{ filter2 }}
     </router-link>
-    <router-link v-if="filter3" class="filter" :to="{ name: filter3 }" tag="span">
+    <router-link v-if="filter3" class="filter" :to="{ name: 'projects', query: {role: filter3} }" :class="{ 'active': role === filter3 }">
       {{ filter3 }}
     </router-link>
-    <router-link v-if="filter4" class="filter" :to="{ name: filter4 }" tag="span">
+    <router-link v-if="filter4" class="filter" :to="{ name: 'projects', query: {role: filter4} }" :class="{ 'active': role === filter4 }">
       {{ filter4 }}
     </router-link>
   </div>
@@ -64,7 +65,7 @@
     transform: scaleX(1);
   }
 }
-.filter.router-link-exact-active:before {
+.active:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);

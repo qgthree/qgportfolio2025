@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 const Explore = () => import('../views/primary/Explore.vue')
 const ProjectView = () => import('../views/secondary/ProjectView.vue')
-const Projects = () => import('../components/Projects.vue')
+const Project = () => import('../components/Project.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,30 +15,15 @@ const router = createRouter({
         {
           path: '/projects',
           name: 'projects',
-          redirect: '/projects/designer',
           components: {
             main: ProjectView
           },
           children: [
             {
-              path: '/projects/designer',
-              name: 'designer',
+              path: '/projects/:id',
+              name: 'project',
               components: {
-                timeline: Projects
-              }
-            },
-            {
-              path: '/projects/developer',
-              name: 'developer',
-              components: {
-                timeline: Projects
-              }
-            },
-            {
-              path: '/projects/advisor',
-              name: 'advisor',
-              components: {
-                timeline: Projects
+                timeline: Project
               }
             }
           ]
