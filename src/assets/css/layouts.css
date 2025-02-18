@@ -16,7 +16,6 @@
   justify-content: center;
 }
 .two-column_right {
-  justify-content: flex-start;
   background-size: cover;
   background-position-x: center;
   background-position-y: top;
@@ -34,21 +33,4 @@
     height: calc(100vh - 80px);
     padding: 40px 25px;
   }
-}
-
-/* component css for right column */
-.two-column_right section {
-  width: 359px;
-}
-
-.section_heading {
-  text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 25px;
-}
-.section_label {
-  padding: 5px 0px 5px 0px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #000;
 }
