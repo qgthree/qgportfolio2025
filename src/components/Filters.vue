@@ -4,29 +4,30 @@ defineProps({
   filter2: String,
   filter3: String,
   filter4: String,
-  role: String
+  qtype: String,
+  qresult: String
 })
 </script>
 
 <template>
-  <div id="filters">
-    <router-link class="filter" :to="{ name: 'projects' }" :class="{ 'active': !role }">
+  <div class="filters">
+    <router-link class="filter" :to="$route.path" :class="{ 'active': !qresult }">
       {{ filter1 }}
     </router-link>
-    <router-link v-if="filter2" class="filter" :to="{ name: 'projects', query: {role: filter2} }" :class="{ 'active': role === filter2 }">
+    <router-link v-if="filter2" class="filter" :to="{ query: {[qtype]: filter2} }" :class="{ 'active': qresult === filter2 }">
       {{ filter2 }}
     </router-link>
-    <router-link v-if="filter3" class="filter" :to="{ name: 'projects', query: {role: filter3} }" :class="{ 'active': role === filter3 }">
+    <router-link v-if="filter3" class="filter" :to="{ query: {[qtype]: filter3} }" :class="{ 'active': qresult === filter3 }">
       {{ filter3 }}
     </router-link>
-    <router-link v-if="filter4" class="filter" :to="{ name: 'projects', query: {role: filter4} }" :class="{ 'active': role === filter4 }">
+    <router-link v-if="filter4" class="filter" :to="{ query: {[qtype]: filter4} }" :class="{ 'active': qresult === filter4 }">
       {{ filter4 }}
     </router-link>
   </div>
 </template>
 
 <style scoped>
-#filters {
+.filters {
   width: 100%;
   max-width: 700px;
   text-align: left;

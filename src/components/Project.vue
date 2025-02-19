@@ -1,73 +1,75 @@
 <script setup>
-defineProps({
-  Projects: Array
-})
+import { useProjectsStore } from '@/stores/projectsStore'
+import { useRoute } from 'vue-router';
+import Applink from '@/components/Applink.vue'
+
+const route = useRoute();
+const projectID = route.params.id;
+const project = useProjectsStore().projects.find(project => project.id === projectID);
+const getImageUrl = (assetName) => {
+  return new URL(`../assets/images/${assetName}`, import.meta.url).href
+}
 </script>
 
 <template>
-  <section class="timeline">
-    <Filters filter1="designer" filter2="developer" filter3="advisor" />
-    <div id="tl_items">
-      <transition-group name="tl_item" tag="div">
-        <div class="tl_item" v-for="(project) in projects" :key="project.id">
-          <div class="details">
-            <div class="details_left">
-              <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + project.user.userImage + ')' }"></span>
-              <span v-else class="material-symbols-outlined">account_circle</span>
-              <span>{{ project.user.username }}</span>
-              <span>&nbsp;∙&nbsp;</span>
-              <span class="lighter">{{ project.year }}</span>
-            </div>
-            <div class="details_right">
-            </div>
+  <main class="mainContent">
+    <div class="verticalContent">
+      <div class="tl_item">
+        <h1>
+          {{ project.title }}
+        </h1>
+        <div class="details">
+          <div class="details_left">
+            <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + project.user.userImage + ')' }"></span>
+            <span v-else class="material-symbols-outlined">account_circle</span>
+            <span>{{ project.user.username }}</span>
+            <span>&nbsp;∙&nbsp;</span>
+            <span class="lighter">{{ project.year }}</span>
           </div>
-          <h3>
-            {{ project.title }}
-          </h3>
-          <a
-            class="project_banner"
-            role="img"
-            :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
-            :aria-label="project.banner.alt"
-          >
-          </a>
-          <div class="details">
-            <div class="details_left">
-              <a v-for="(skill, index) in project.skills" class="details_button" :key="index">{{ skill }}</a>
-            </div>
-            <div class="details_right">
-              <span class="material-symbols-outlined lighter" :class="{ 'liked': project.liked }" @click="useProjectsStore().toggleProjectLike(project.id)">favorite</span>
-            </div>
+          <div class="details_right">
           </div>
         </div>
-      </transition-group>
+        <Applink
+          v-if="project.link"
+          :to="project.link.url"
+          class="project_banner"
+          role="img"
+          :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
+          :aria-label="project.banner.alt"
+        >
+        </Applink>
+        <div
+          v-else
+          class="project_banner"
+          role="img"
+          :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
+          style="cursor: default;"
+          :aria-label="project.banner.alt"
+        >
+        </div>
+        <div class="details">
+          <div class="details_left">
+            <a v-for="(skill, index) in project.skills" class="details_button" :key="index">{{ skill }}</a>
+          </div>
+          <div class="details_right">
+            <span class="material-symbols-outlined lighter" :class="{ 'liked': project.liked }" @click="useProjectsStore().toggleProjectLike(project.id)">favorite</span>
+          </div>
+        </div>
+        <div v-html="project.description"></div>
+        <Applink v-if="project.link" :to="project.link.url" class="projectLink"><p>View the {{project.link.type}}.</p></Applink>
+      </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <style scoped>
 .tl_item {
-  transition: all 0.3s;
+  border: none;
 }
-
-.project_banner {
-  display: block;
-  cursor: pointer;
-  aspect-ratio: 16 / 9;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-size: cover;
-  /* filter: grayscale(100%); */
-  transition: all 0.2s ease;
-  filter: grayscale(100%);
+.details {
+  margin-bottom: 40px;
 }
-
-.tl_item-enter, .tl_item-leave-to
-  /* .list-complete-leave-active below version 2.1.8 */ {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  .tl_item-leave-active {
-    position: absolute;
-  }
+.projectLink {
+  font-weight: 200;
+}
 </style>

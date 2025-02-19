@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Explore = () => import('../views/primary/Explore.vue')
 const ProjectView = () => import('../views/secondary/ProjectView.vue')
 const Project = () => import('../components/Project.vue')
+const ProfileView = () => import('../views/secondary/ProfileView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +24,7 @@ const router = createRouter({
               path: '/projects/:id',
               name: 'project',
               components: {
-                timeline: Project
+                vertical: Project
               }
             }
           ]
@@ -38,7 +39,10 @@ const router = createRouter({
         },
         {
           path: '/profile',
-          name: 'profile'
+          name: 'profile',
+          components: {
+            main: ProfileView
+          }
         }
       ]
     }

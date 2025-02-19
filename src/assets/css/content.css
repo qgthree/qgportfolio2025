@@ -1,29 +1,78 @@
-/* main list item components */
+/* Used on most, if not all, "pages." */ 
 
-#tl_items {
+.mainContent {
+  display: flex;
+  align-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  padding: 40px 50px;
+  overflow: scroll;
+  justify-content: center;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainContent {
+    height: calc(100vh - 80px);
+    padding: 40px 25px;
+  }
+}
+
+.verticalContent {
   width: 100%;
   max-width: 700px;
 }
+
+/* used primarily for projects */
+
+.timeline-enter, .timeline-leave-to
+  /* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.timeline-leave-active {
+  position: absolute;
+}
+
 .tl_item {
   padding: 30px 0px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s;
 }
+
 .tl_item > * {
   margin-bottom: 20px;
 }
+
+.project_banner {
+  display: block;
+  cursor: pointer;
+  aspect-ratio: 16 / 9;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  /* filter: grayscale(100%); */
+  transition: all 0.2s ease;
+}
+
 .details {
   display: grid;
   grid-template-columns: 1fr 30px;
   letter-spacing: 0.5px;
   min-height: 30px;
 }
+
 .details_left, .details_right {
   display: flex;
   align-items: center;
 }
+
 .details_left {
   justify-content: flex-start;
 }
+
 .details_left .userImage {
   border-radius: 50%;
   height: 26px;
@@ -32,26 +81,32 @@
   background-size: cover;
   margin-right: 10px;
 }
+
 .details_right {
   justify-content: center;
 }
+
 .details_right .material-symbols-outlined {
   font-variation-settings:
   'opsz' 48;
   font-size: 22px;
   user-select: none;
 }
+
 .details_right .material-symbols-outlined {
   cursor: pointer;
   color: #e3572e;
   transition: all 0.2s ease;
 }
+
 .details_right .material-symbols-outlined:hover {
   font-size: 28px;
 }
+
 .details_right .material-symbols-outlined:active {
   font-size: 22px;
 }
+
 .details_right .material-symbols-outlined.liked {
   font-size: 24px;
   font-variation-settings: 'FILL' 1;
