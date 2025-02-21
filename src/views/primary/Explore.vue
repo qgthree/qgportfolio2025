@@ -15,7 +15,7 @@ import Nav from '../../components/Nav.vue'
       </div>
     </div>
     <Suspense>
-      <router-view name="main" />
+      <router-view name="view" />
     </Suspense>
     <footer>
       <Nav />
@@ -49,6 +49,19 @@ import Nav from '../../components/Nav.vue'
       }
         & a {
           color: #000;
+          height: fit-content;
+        }
+        & span {
+          width: 30px;
+          height: 40px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          transition: all 0.2s ease;
+        }
+        & span:hover {
+          font-size: 24px;
         }
     & footer {
       padding: 20px 25px;

@@ -5,8 +5,8 @@
   <RouterLink :to="{ name: 'projects'}" class="tooltip" data-text="projects">
     <span class="material-symbols-outlined">featured_play_list</span>
   </RouterLink>
-  <RouterLink to="/notifications" class="tooltip" data-text="notifications">
-    <span class="material-symbols-outlined">notifications</span>
+  <RouterLink to="/thoughts" class="tooltip" data-text="thoughts">
+    <span class="material-symbols-outlined">neurology</span>
   </RouterLink>
   <RouterLink to="/messages" class="tooltip" data-text="messages">
     <span class="material-symbols-outlined">mail</span>

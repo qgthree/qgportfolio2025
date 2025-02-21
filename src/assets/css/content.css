@@ -90,12 +90,12 @@
   font-variation-settings:
   'opsz' 48;
   font-size: 22px;
+  font-weight: 200;
   user-select: none;
 }
 
 .details_right .material-symbols-outlined {
   cursor: pointer;
-  color: #e3572e;
   transition: all 0.2s ease;
 }
 

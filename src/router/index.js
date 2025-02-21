@@ -17,21 +17,21 @@ const router = createRouter({
           path: '/projects',
           name: 'projects',
           components: {
-            main: ProjectView
+            view: ProjectView
           },
           children: [
             {
               path: '/projects/:id',
               name: 'project',
               components: {
-                vertical: Project
+                main: Project
               }
             }
           ]
         },
         {
-          path: '/notifications',
-          name: 'notifications'
+          path: '/thoughts',
+          name: 'thoughts'
         },
         {
           path: '/messages',
@@ -41,7 +41,7 @@ const router = createRouter({
           path: '/profile',
           name: 'profile',
           components: {
-            main: ProfileView
+            view: ProfileView
           }
         }
       ]

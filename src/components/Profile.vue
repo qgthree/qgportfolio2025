@@ -8,7 +8,14 @@ defineProps({
 
 <template>
   <main class="mainContent">
-    <Filters filter1="About Quintus" filter2="skills" :qresult="filter" qtype="filter" />
+    <Filters
+      filter1="About Quintus"
+      filter2="skills"
+      filter3="experience"
+      filter4="education"
+      :qresult="filter"
+      qtype="filter"
+    />
     <div class="verticalContent">
     </div>
   </main>
