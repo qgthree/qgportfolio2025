@@ -1,27 +1,20 @@
 <script setup>
 defineProps({
-  filter1: String,
-  filter2: String,
-  filter3: String,
-  filter4: String,
-  qtype: String,
+  filters: Array,
+  qkey: String,
   qresult: String
-})
+});
 </script>
 
 <template>
   <div class="filters">
-    <router-link class="filter" :to="$route.path" :class="{ 'active': !qresult }">
-      {{ filter1 }}
-    </router-link>
-    <router-link v-if="filter2" class="filter" :to="{ query: {[qtype]: filter2} }" :class="{ 'active': qresult === filter2 }">
-      {{ filter2 }}
-    </router-link>
-    <router-link v-if="filter3" class="filter" :to="{ query: {[qtype]: filter3} }" :class="{ 'active': qresult === filter3 }">
-      {{ filter3 }}
-    </router-link>
-    <router-link v-if="filter4" class="filter" :to="{ query: {[qtype]: filter4} }" :class="{ 'active': qresult === filter4 }">
-      {{ filter4 }}
+    <router-link
+      v-for="(value, index) in filters"
+      :key="index" class="filter"
+      :to="index > 0 ? { query: {[qkey]: value} } : $route.path"
+      :class="{ 'active': !qresult && index === 0 || qresult && qresult === value }"
+      >
+      {{ value }}
     </router-link>
   </div>
 </template>

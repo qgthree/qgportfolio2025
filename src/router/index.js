@@ -7,20 +7,26 @@ const ProfileView = () => import('../views/secondary/ProfileView.vue')
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
+    { // home has no nav
+      path: '/',
+      name: 'home',
+      redirect: '/explore'
+    },
+    { // explore has nav, but no main content
       path: '/explore',
       name: 'explore',
       redirect: '/projects',
       component: Explore,
       children: [
-        {
+        { // projects has nav and main content
           path: '/projects',
           name: 'projects',
           components: {
             view: ProjectView
           },
+          query: { role: 'all projects' },
           children: [
-            {
+            { // project swaps the main content
               path: '/projects/:id',
               name: 'project',
               components: {

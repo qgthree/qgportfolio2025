@@ -15,11 +15,8 @@ const getImageUrl = (assetName) => {
 <template>
   <main class="mainContent">
     <Filters
-      filter1="all projects"
-      filter2="designer"
-      filter3="developer"
-      filter4="advisor"
-      qtype="role"
+      :filters="['all projects', 'designer', 'developer', 'advisor']"
+      qkey="role"
       :qresult="role" />
     <transition-group name="timeline" tag="div" class="verticalContent">
       <div class="tl_item" v-for="(project) in projects" :key="project.id">
