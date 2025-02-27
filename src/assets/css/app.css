@@ -40,7 +40,7 @@ body {
   font-size: 12px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -60,14 +60,35 @@ h4 {
   font-size: 20px;
 }
 
+h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 17px;
-  line-height: 26px;
+  line-height: 1.5;
   margin-bottom: 15px;
+  color: rgb(0, 0, 0, 0.83);
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  padding-inline-start: 4%;
+}
+  & li {
+    margin-bottom: 1.5%;
+  }
+
+li::marker {
+  content: '– ';
+  font-size: 0.8em;
+  color: rgb(0, 0, 0, 0.83);
 }
 
 .lighter {

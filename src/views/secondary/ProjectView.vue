@@ -26,7 +26,7 @@ watch(() => route.query, (newQuery) => {
   <div id="ProjectView" class="two-column">
     <div class="two-column_left">
       <Projects v-if="!route.params.id" :projects="filteredProjects(role)" :role="role" />
-      <router-view name="main" />
+      <router-view v-else name="main" />
     </div>
     <div class="two-column_right">
     </div>

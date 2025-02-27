@@ -38,7 +38,7 @@ const getImageUrl = (assetName) => {
         </h3>
         <router-link
           :to="{ name: 'project', params: { id: project.id } }"
-          class="project_banner"
+          class="content_banner"
           role="img"
           :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
           :aria-label="project.banner.alt"
@@ -61,7 +61,7 @@ const getImageUrl = (assetName) => {
 .project_title {
   color: #000;
 }
-.project_banner {
+.content_banner {
   filter: grayscale(100%);
 }
 </style>

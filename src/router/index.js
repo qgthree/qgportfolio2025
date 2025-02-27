@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Explore = () => import('../views/primary/Explore.vue')
 const ProjectView = () => import('../views/secondary/ProjectView.vue')
 const Project = () => import('../components/Project.vue')
+const MessageView = () => import('../views/secondary/MessageView.vue')
 const ProfileView = () => import('../views/secondary/ProfileView.vue')
 
 const router = createRouter({
@@ -18,13 +19,12 @@ const router = createRouter({
       redirect: '/projects',
       component: Explore,
       children: [
-        { // projects has nav and main content
+        { // projects has nav, two-column layout, and main content
           path: '/projects',
           name: 'projects',
           components: {
             view: ProjectView
           },
-          query: { role: 'all projects' },
           children: [
             { // project swaps the main content
               path: '/projects/:id',
@@ -41,7 +41,10 @@ const router = createRouter({
         },
         {
           path: '/messages',
-          name: 'messages'
+          name: 'messages',
+          components: {
+            view: MessageView
+          }
         },
         {
           path: '/profile',

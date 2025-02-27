@@ -8,29 +8,57 @@ export const useProfileStore = defineStore('profileStore', {
           first: 'Quintus',
           last: 'Greene'
         },
-        statement: 'Senior designer/developer with 10+ years of experience; passionate about intuitive, minimalist design; adept at clear communication; and skilled in modern frontend technologies',
-        skills: [
-          { name: 'UX/UI Design', type: 'design' },
-          { name: 'Frontend Development', type: 'frontend' },
-          { name: 'Data Visualization', type: 'frontend' },
-          { name: 'Project Management', type: 'general' },
-          { name: 'JavaScript', type: 'frontend' },
-          { name: 'HTML/CSS', type: 'frontend' },
-          { name: 'TypeScript', type: 'frontend' },
-          { name: 'Vue.js', type: 'frontend' },
-          { name: 'Leaflet', type: 'frontend' },
-          { name: 'Chart.js', type: 'frontend' },
-          { name: 'ANDI (508 Compliance)', type: 'frontend' },
-          { name: 'Node.js', type: 'backend' },
-          { name: 'Express', type: 'backend' },
-          { name: 'GraphQL', type: 'backend' },
-          { name: 'MongoDB', type: 'backend' },
-          { name: 'AWS', type: 'devops' },
-          { name: 'Git', type: 'general' },
-          { name: 'Jira', type: 'general' },
-          { name: 'Adobe CC', type: 'design' },
-          { name: 'Figma', type: 'design' }
+        phone: '301.291.5074',
+        email: 'LangstonQ@gmail.com',
+        social: [
+          {
+            name: 'bluesky',
+            url: 'https://bsky.app/profile/onemac.bsky.social',
+            handle: '@onemac.bsky.social',
+            image: 'bluesky.svg'
+          }
         ],
+        statement: 'Senior Frontend Developer & UX/UI Designer with 10+ years of experience crafting intuitive digital experiences. Adept at modern frontend technologies, minimalistic design, and user-centered solutions. Proven ability to lead cross-functional teams, optimize web applications, and drive product improvements.',
+        skills: {
+          "Frontend Development": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "HTML/CSS",
+            "Vue.js",
+            "React",
+            "Chart.js",
+            "Leaflet",
+            "Component Libraries"
+          ],
+          "Backend & APIs": [
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "GraphQL"
+          ],
+          "UI/UX & Accessibility": [
+            "UX/UI Design",
+            "Figma",
+            "Adobe CC",
+            "ANDI (508 Compliance)"
+          ],
+          "Cloud & DevOps": [
+            "AWS"
+          ],
+          "Collaboration & Tools": [
+            "Git",
+            "Jira"
+          ],
+          "Core Competencies": [
+            "Collaboration",
+            "Leadership",
+            "Accessible Design",
+            "Responsive Design",
+            "Quality Assurance",
+            "State Management",
+            "Cross-Browser & Cross-Platform Development"
+          ]
+        },
         experience: [
           {
             job_title: 'Senior Advisor, Web Development',
@@ -39,7 +67,7 @@ export const useProfileStore = defineStore('profileStore', {
             joined: '2024-01', //YYYY-MM
             left: '', //YYYY-MM
             current: true,
-            description: 'Guide and facilitate development of web applications. Advise project requirements. Lead UX design and UI development initiatives. Examine and provide expert analysis of concepts and designs. Test applications and ensure accessibility standards are met.',
+            description: '<ul>\n<li>Conceptualized and led the development of a vendor identification platform for international crisis response using Vue 3, streamlining access to critical resources.</li>\n<li>Advised and guided the migration of four web applications from legacy systems to the ServiceNow platform to improve security and scalability.</li>\n<li>Led cross-functional teams to review and test applications, ensuring adherence to design and accessibility standards.</li>\n<li>Collaborated with graphic design team to redesign and prototype public-facing web properties, including cidi.usaid.gov.</li>\n<li>Provided expert analysis of UX/UI designs presented by partnering contractors, improving usability and functionality.</li>\n</ul>',
           },
           {
             job_title: 'Senior Web Developer',
@@ -48,7 +76,7 @@ export const useProfileStore = defineStore('profileStore', {
             joined: '2019-01',
             left: '2025-01',
             current: false,
-            description: 'Led development of web applications for USAID’s Bureau for Humanitarian Assistance (BHA). Tested/debugged applications. Noteworthy achievements include design/development of: a monitoring and evaluation reporting tool for partner orgs; interactive tools to map and visualize award data; BHA’s jobs portal; BHA’s International Authorities Database (USGIAD); and BHA’s Center for International Disaster Information website (CIDI).',
+            description: '<ul>\n<li>Spearheaded the design and development of a monitoring & evaluation tool under tight deadlines, earning an award from USAID Food for Peace.</li>\n<li>Developed a Vue 2-based dashboard for USAID’s Bureau for Humanitarian Assistance (BHA), enhancing program planning capabilities.</li>\n<li>Led the redesign of BHA’s Jobs Portal, transforming UI concepts into functional prototypes and integrating with a .NET backend through collaboration.</li>\n<li>Designed and led a team to build the “International Authorities Database,” a Drupal-based platform for cross-agency policy reference in international crisis response.</li>\n</ul>',
           },
           {
             job_title: 'Web Developer',
@@ -57,7 +85,7 @@ export const useProfileStore = defineStore('profileStore', {
             joined: '2016-05',
             left: '2018-12',
             current: false,
-            description: 'Led UX design projects. Developed new applications and features. Optimized web content and navigation. Tested and debugged applications. Maintained web style guide. Measured and analyzed user engagement via Google Analytics.',
+            description: '<ul>\n<li>Designed and developed an interactive "text to donate" application using Vue 2 and Firebase, showcased at ASH Annual Meeting, contributing to record fundraising.</li>\n<li>Built the Sickle Cell Disease Coalition (SCDC) website on GitHub Pages, integrating with CloudCannon CMS and training the SCDC team for content management.</li>\n<li>Managed hematology.org, enhancing component libraries, testing cross-browser compatibility, and optimizing user engagement through Google Analytics.</li>\n</ul>',
           },
           {
             job_title: 'Freelance Web Developer',
@@ -66,7 +94,7 @@ export const useProfileStore = defineStore('profileStore', {
             joined: '2014-06',
             left: '2016-05',
             current: false,
-            description: 'Designed/developed web properties and assets for clients such as the Detroit Institute of Arts and UCLA. Noteworthy projects include an assignment with the World Wildlife Fund, which involved supporting the organization’s “Apps for Earth” partnership with Apple.',
+            description: '<ul>\n<li>Contributed to World Wildlife Fund’s “Apps for Earth” partnership with Apple, conducting testing/debugging for the organization’s ”WWF Together" iOS app.</li>\n<li>Designed html email event invitations for The Detroit Institute of Arts.\n<li>Created digital assets and illustrations used in a UCLA Neuroscience study.</li>\n</ul>',
           }
         ],
         education: [

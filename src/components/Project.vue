@@ -30,9 +30,9 @@ const getImageUrl = (assetName) => {
           </div>
         </div>
         <Applink
-          v-if="project.link"
-          :to="project.link.url"
-          class="project_banner"
+          v-if="project.links"
+          :to="project.links[0].url"
+          class="content_banner"
           role="img"
           :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
           :aria-label="project.banner.alt"
@@ -40,7 +40,7 @@ const getImageUrl = (assetName) => {
         </Applink>
         <div
           v-else
-          class="project_banner"
+          class="content_banner"
           role="img"
           :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
           style="cursor: default;"
@@ -56,7 +56,9 @@ const getImageUrl = (assetName) => {
           </div>
         </div>
         <div v-html="project.description"></div>
-        <Applink v-if="project.link" :to="project.link.url" class="projectLink"><p>View the {{project.link.type}}.</p></Applink>
+        <Applink v-for="(link, index) in project.links" :key="index" :to="link.url" class="projectLink">
+          <span class="material-symbols-outlined">{{ link.type === 'code' ? 'code' : 'visibility' }}</span>View the {{ link.type }}
+        </Applink>
       </div>
     </div>
   </main>
@@ -70,6 +72,12 @@ const getImageUrl = (assetName) => {
   margin-bottom: 40px;
 }
 .projectLink {
+  display: inline-flex;
+  align-items: center;
   font-weight: 200;
+  margin-right: 20px;
+}
+.projectLink .material-symbols-outlined {
+  margin-right: 8px;
 }
 </style>
