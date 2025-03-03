@@ -9,7 +9,7 @@
   background-position-x: center !important;
   background-position-y: top !important;
   background-color: #000;
-  background-image: url('../images/workdesk.jpg');
+  background-image: url('@/assets/images/workdesk.jpg');
 }
 @media only screen and (max-width: 1100px) {
   .two-column {

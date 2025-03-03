@@ -34,6 +34,6 @@ watch(() => route.query, (newQuery) => {
 </template>
 <style scoped>
 .two-column_right {
-  background-image: url('../../assets/images/workdesk.jpg');
+  background-image: url('@/assets/images/workdesk.jpg');
 }
 </style>

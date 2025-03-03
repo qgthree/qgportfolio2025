@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-const Explore = () => import('../views/primary/Explore.vue')
-const ProjectView = () => import('../views/secondary/ProjectView.vue')
-const Project = () => import('../components/Project.vue')
-const ThoughtsView = () => import('../views/secondary/ThoughtsView.vue')
-const MessageView = () => import('../views/secondary/MessageView.vue')
-const ProfileView = () => import('../views/secondary/ProfileView.vue')
+const Explore = () => import('@/views/primary/Explore.vue')
+const ProjectView = () => import('@/views/secondary/ProjectView.vue')
+const Project = () => import('@/components/Project.vue')
+const ThoughtsView = () => import('@/views/secondary/ThoughtsView.vue')
+const MessageView = () => import('@/views/secondary/MessageView.vue')
+const ProfileView = () => import('@/views/secondary/ProfileView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
