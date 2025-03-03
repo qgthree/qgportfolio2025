@@ -40,6 +40,8 @@ import Nav from '../../components/Nav.vue'
       height: 100vh;
       min-height: 600px;
       border-right: 1px solid rgba(0,0,0,0.1);
+      background-color: #fff;
+      z-index: 100;
     }
       & #logo {
         display: flex;

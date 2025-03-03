@@ -4,7 +4,7 @@ import { useProjectsStore } from '@/stores/projectsStore'
 
 defineProps({
   projects: Array,
-  role: String
+  filter: String
 })
 
 const getImageUrl = (assetName) => {
@@ -17,12 +17,12 @@ const getImageUrl = (assetName) => {
     <Filters
       :filters="['all projects', 'designer', 'developer', 'advisor']"
       qkey="role"
-      :qresult="role" />
+      :qresult="filter" />
     <transition-group name="timeline" tag="div" class="verticalContent">
       <div class="tl_item" v-for="(project) in projects" :key="project.id">
         <div class="details">
           <div class="details_left">
-            <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + project.user.userImage + ')' }"></span>
+            <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + getImageUrl(project.user.userImage) + ')' }"></span>
             <span v-else class="material-symbols-outlined">account_circle</span>
             <span>{{ project.user.username }}</span>
             <span>&nbsp;∙&nbsp;</span>
@@ -43,6 +43,9 @@ const getImageUrl = (assetName) => {
           :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
           :aria-label="project.banner.alt"
         >
+          <div class="content_banner_overlay">
+            read more
+          </div>
         </router-link>
         <div class="details">
           <div class="details_left">
@@ -63,5 +66,21 @@ const getImageUrl = (assetName) => {
 }
 .content_banner {
   filter: grayscale(100%);
+}
+.content_banner_overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+}
+
+.content_banner:hover .content_banner_overlay {
+  opacity: 1;
 }
 </style>

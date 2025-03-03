@@ -20,7 +20,7 @@ const getImageUrl = (assetName) => {
         </h1>
         <div class="details">
           <div class="details_left">
-            <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + project.user.userImage + ')' }"></span>
+            <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + getImageUrl(project.user.userImage) + ')' }"></span>
             <span v-else class="material-symbols-outlined">account_circle</span>
             <span>{{ project.user.username }}</span>
             <span>&nbsp;∙&nbsp;</span>

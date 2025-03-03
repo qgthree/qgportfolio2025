@@ -9,7 +9,6 @@
   padding: 40px 50px;
   overflow: scroll;
   justify-content: center;
-  background-color: #fff;
 }
 
 @media only screen and (max-width: 800px) {

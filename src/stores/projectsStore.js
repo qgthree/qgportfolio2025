@@ -6,7 +6,7 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["designer", "developer"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Developer, Macfadden"
         },
         "year": "2019",
@@ -24,7 +24,7 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["designer", "developer"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Developer, Macfadden"
         },
         "year": "2020",
@@ -42,7 +42,7 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["designer", "developer"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Developer, Macfadden"
         },
         "year": "2021",
@@ -65,7 +65,7 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["developer", "advisor"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Developer, Macfadden"
         },
         "year": "2022",
@@ -92,7 +92,7 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["advisor"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Development Advisor, Credence LLC"
         },
         "year": "2023",
@@ -115,17 +115,23 @@ export const useProjectsStore = defineStore('projectsStore', {
       {
         "role": ["designer", "developer"],
         "user": {
-          "userImage": "https://live.staticflickr.com/65535/52339866739_c8e1c10371_h.jpg",
+          "userImage": "qg3.jpg",
           "username": "Senior Web Development Advisor, Credence LLC"
         },
         "year": "2024",
-        "title": "Global Resource Database",
+        "title": "Global Resource Dashboard",
         "banner": {
           "image": "GRD.png",
-          "alt": "Global Resource Database"
+          "alt": "Global Resource Dashboard"
         },
         "description": "<p>As a requirement for its contract with USAID’s Bureau for Humanitarian Assistance, Credence was tasked with developing a reference tool to aid in identifying vendors available for emergency crisis response. I was asked to help conceptualize the tool and lead a team to build it. For this project, I requested one additional developer, to assist with the backend.</p><p>I began by working with the contract’s Program Director to discover requirements. To identify use cases, I also interviewed intended users. We determined the most important need was the ability to cross-reference geographic locations and service categories. A map would provide an easy interface, alongside other UI components for listing and filtering vendors.</p><p>I designed a low-fidelity mockup in Figma and worked with the client to design a database schema from sample data. After designs were approved, we moved to development. The REST API was assigned to my colleague, and I focused on the frontend. Due to familiarity, I chose Vue 3 and Leaflet as our framework and mapping libraries, respectively.</p>",
         "skills": ["Figma", "Vue 3", "Leaflet", "JavaScript", "HTML/CSS"],
+        "links": [
+          {
+            "type": "code",
+            "url": "https://github.com/qgthree/GRD"
+          }
+        ],
         "id": "6",
         "liked": false
       }

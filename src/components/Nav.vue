@@ -8,11 +8,11 @@
   <RouterLink to="/thoughts" class="tooltip" data-text="thoughts">
     <span class="material-symbols-outlined">neurology</span>
   </RouterLink>
-  <RouterLink to="/messages" class="tooltip" data-text="messages">
-    <span class="material-symbols-outlined">mail</span>
-  </RouterLink>
   <RouterLink to="/profile" class="tooltip" data-text="profile">
     <span class="material-symbols-outlined">account_circle</span>
+  </RouterLink>
+  <RouterLink to="/messages" class="tooltip" data-text="messages">
+    <span class="material-symbols-outlined">mail</span>
   </RouterLink>
 </nav>
 </template>
