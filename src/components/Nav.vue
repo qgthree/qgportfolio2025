@@ -31,13 +31,13 @@
       text-decoration: none;
       height: 40px;
     }
-      & :hover > .material-symbols-outlined {
-        font-size: 38px;
-      }
       & .material-symbols-outlined {
         color: #000;
         font-size: 28px;
         transition: all 0.2s ease;
+      }
+      & :hover > .material-symbols-outlined {
+        font-size: 38px;
       }
     & .router-link-active > .material-symbols-outlined {
       font-variation-settings:

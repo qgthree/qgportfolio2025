@@ -70,12 +70,16 @@ import Nav from '@/components/Nav.vue'
       display: none;
       justify-content: center;
       width: 100%;
-      height: 100%;
+      position: fixed;
+      bottom: 0px;
+      height: 80px;
+      background-color: #fff;
+      z-index: 100;
     }
   @media screen and (max-width: 800px) {
     #layout_explore {
       grid-template-columns: 1fr;
-      grid-template-rows: calc(100vh - 80px) 80px;
+      grid-template-rows: 1fr 80px;
     }
       & #sidepanel {
         display: none;

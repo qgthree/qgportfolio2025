@@ -58,11 +58,11 @@
 
 .content_item {
   padding-top: 30px;
-  font-size: 15px;
 }
 
 .content_details {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -72,10 +72,12 @@
   grid-template-columns: 1fr 30px;
   letter-spacing: 0.5px;
   min-height: 30px;
+  font-size: 12px;
 }
 
 .details_left, .details_right {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -92,6 +94,9 @@
   margin-right: 10px;
 }
 
+.details_left_text {
+  max-width: 85%;
+}
 
 /* for the 'like' button */
 .details_right {

@@ -12,7 +12,7 @@ defineProps({
 <template>
   <main class="mainContent">
     <Filters
-      :filters="[`about ${profile.name.first}`, 'skills', 'experience', 'education']"
+      :filters="[`${profile.name.first}`, 'skills', 'experience', 'education']"
       :qresult="filter"
       qkey="filter"
     />

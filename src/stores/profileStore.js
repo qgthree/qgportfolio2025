@@ -12,10 +12,16 @@ export const useProfileStore = defineStore('profileStore', {
         email: 'LangstonQ@gmail.com',
         social: [
           {
-            name: 'bluesky',
+            name: 'Bluesky',
             url: 'https://bsky.app/profile/onemac.bsky.social',
             handle: '@onemac.bsky.social',
             image: 'bluesky.svg'
+          },
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/quintusgreene/',
+            handle: 'linkedin.com/in/quintusgreene/',
+            image: 'linkedin.svg'
           }
         ],
         statement: 'Senior Frontend Developer & UX/UI Designer with 10+ years of experience crafting intuitive digital experiences. Adept at modern frontend technologies, minimalistic design, and user-centered solutions. Proven ability to lead cross-functional teams, optimize web applications, and drive product improvements.',
@@ -36,10 +42,11 @@ export const useProfileStore = defineStore('profileStore', {
             "MongoDB",
             "GraphQL"
           ],
-          "UI/UX & Accessibility": [
+          "UX/UI & Accessibility": [
             "UX/UI Design",
             "Figma",
             "Adobe CC",
+            "Lighthouse",
             "ANDI (508 Compliance)"
           ],
           "Cloud & DevOps": [

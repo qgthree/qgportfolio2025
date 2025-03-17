@@ -65,4 +65,10 @@ defineProps({
     transform: scaleX(1);
   }
 }
+
+@media screen and (max-width: 800px) {
+    .filter {
+      margin-right: 20px;
+    }
+  }
 </style>

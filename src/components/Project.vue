@@ -22,9 +22,9 @@ const getImageUrl = (assetName) => {
           <div class="details_left">
             <span v-if="project.user.userImage" class="userImage" v-bind:style="{ backgroundImage: 'url(' + getImageUrl(project.user.userImage) + ')' }"></span>
             <span v-else class="material-symbols-outlined">account_circle</span>
-            <span>{{ project.user.username }}</span>
-            <span>&nbsp;∙&nbsp;</span>
-            <span class="lighter">{{ project.year }}</span>
+            <span class="details_left_text">
+              <span>{{ project.user.username }}&nbsp;∙&nbsp;<span class="lighter">{{ project.year }}</span></span>
+            </span>
           </div>
           <div class="details_right">
           </div>
@@ -49,16 +49,20 @@ const getImageUrl = (assetName) => {
         </div>
         <div class="details">
           <div class="details_left">
-            <a v-for="(skill, index) in project.skills" class="details_button" :key="index">{{ skill }}</a>
+            <div v-for="(skill, index) in project.skills" class="details_button lighter" :key="index">{{ skill }}</div>
           </div>
           <div class="details_right">
             <span class="material-symbols-outlined lighter" :class="{ 'liked': project.liked }" @click="useProjectsStore().toggleProjectLike(project.id)">favorite</span>
           </div>
         </div>
         <div v-html="project.description"></div>
-        <Applink v-for="(link, index) in project.links" :key="index" :to="link.url" class="projectLink">
-          <span class="material-symbols-outlined">{{ link.type === 'code' ? 'code' : 'visibility' }}</span>View the {{ link.type }}
-        </Applink>
+        <div class="details">
+          <div class="details_left">
+            <Applink v-for="(link, index) in project.links" :key="index" :to="link.url" class="projectLink">
+              <span class="material-symbols-outlined">{{ link.type === 'code' ? 'code' : 'visibility' }}</span>View the {{ link.type }}
+            </Applink>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -74,7 +78,6 @@ const getImageUrl = (assetName) => {
 .projectLink {
   display: inline-flex;
   align-items: center;
-  font-weight: 200;
   margin-right: 20px;
 }
 .projectLink .material-symbols-outlined {

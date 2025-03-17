@@ -12,7 +12,7 @@ const router = createRouter({
     { // home has no nav
       path: '/',
       name: 'home',
-      redirect: '/explore'
+      redirect: '/projects'
     },
     { // explore has nav, but no main content
       path: '/explore',
@@ -56,6 +56,10 @@ const router = createRouter({
           components: {
             view: ProfileView
           }
+        },
+        {
+          path: '/:catchAll(.*)',
+          redirect: '/'
         }
       ]
     }
