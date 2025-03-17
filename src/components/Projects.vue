@@ -78,6 +78,7 @@ const getImageUrl = (assetName) => {
   text-transform: uppercase;
   color: #fff;
   opacity: 0;
+  font-size: 12px;
 }
 
 .content_banner:hover .content_banner_overlay {
