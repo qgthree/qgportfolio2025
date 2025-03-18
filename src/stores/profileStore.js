@@ -22,7 +22,13 @@ export const useProfileStore = defineStore('profileStore', {
             url: 'https://www.linkedin.com/in/quintusgreene/',
             handle: 'linkedin.com/in/quintusgreene/',
             image: 'linkedin.svg'
-          }
+          },
+          {
+            name: 'GitHub',
+            url: 'https://github.com/qgthree/',
+            handle: 'qgthree',
+            image: 'github-mark.svg'
+          },
         ],
         statement: 'Senior Frontend Developer & UX/UI Designer with 10+ years of experience crafting intuitive digital experiences. Adept at modern frontend technologies, minimalistic design, and user-centered solutions. Proven ability to lead cross-functional teams, optimize web applications, and drive product improvements.',
         skills: {

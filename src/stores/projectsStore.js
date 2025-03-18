@@ -16,7 +16,7 @@ export const useProjectsStore = defineStore('projectsStore', {
           'alt': 'Partner Reporting Tool'
         },
         'description': '<p>At USAID’s Food for Peace (FFP), a development team was already contracted to build this tool. However, they were over-extended and had underestimated the project’s urgency. FFP’s Monitoring and Evaluation Team (M&E) reached out to Macfadden to see what can be done in roughly 4 months. We formed a small team of three to take on the project. Mike Weaver served as our Tech Lead and DevOps engineer, Mika Rautiainen contributed as a Drupal engineer, and I led UX/UI design and development.</p><p>As discussions progressed, we learned the project’s requirements were more complex than we initially thought. At first, it was presented as a simple form, but we soon learned that not only we would be collecting data for over 100 analyses, we would need an accounts system to track forms through to completion for dozens of partner organizations. This would allow the orgs to fulfill their annual reporting requirement, and ultimately aid FFP’s report to Congress on the effectiveness of various programs.</p><p>Requirements continued to grow in complexity with each meeting: the app would need to store earlier projections and compare them to outcomes; partner organizations would need to enlist multiple users to complete reports; and because reports would need to progress through various FFP approvals before being accepted, FFP would need a way to provide feedback.</p><p>Mike chose Drupal as our platform, and the three of us began to identify modules that would aid with various requirements. I presented designs and diagrams to the M&E team. Mika focused on building out the forms. All three of us put in overtime to see the project through. We managed to complete it in under three months, well before our deadline, and rich with the “nice to have” features requested along the way.</p><p>The bond our team formed made this one of my most rewarding experiences. My proudest moment wasn’t even the award we received from USAID; it was when I asked Mika to present the completed application to stakeholders, after observing how hard he worked on the project, and how much he deserved the spotlight.</p>',
-        'skills': ['Drupal', 'JavaScript', 'HTML/CSS'],
+        'skills': ['Drupal', 'JavaScript', 'HTML/CSS', 'Bootstrap'],
         'id': '1',
         'liked': false
       },
@@ -57,6 +57,10 @@ export const useProjectsStore = defineStore('projectsStore', {
           {
             'type': 'demo',
             'url': 'https://qgthree.github.io/ng-map_demo/#/'
+          },
+          {
+            'type': 'code',
+            'url': 'https://github.com/qgthree/nigeria-map/'
           }
         ],
         'id': '3',
@@ -102,7 +106,7 @@ export const useProjectsStore = defineStore('projectsStore', {
           'alt': 'Center for International Disaster Information'
         },
         'description': '<p>The Wordpress site was due for a redesign. It had been neglected for too long, and now it appeared dated. After our success with the <em>BHA Jobs</em> website, the graphic designers and I were eager to take on another project.</p><p>For this project, I took a content-first approach. Several pages had unique layouts, so we needed drafts of near-final content to proceed. I began by outlining the site’s menus and taking an inventory of each page. Thereafter, I worked with writers from the Content Team to refine the text.</p><p>I went through a few different drafts with the design team to produce feasible components. After high-fidelity mockups were finalized, I expected to build the front-end, but the project took an unexpected turn: IT decided to migrate the site to ServiceNow. My new role would be to help a ServiceNow-dedicated team translate the designs.</p>',
-        'skills': ['CSS'],
+        'skills': [],
         'links': [
           {
             'type': 'website',
