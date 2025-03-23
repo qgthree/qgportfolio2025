@@ -64,9 +64,11 @@ const getImageUrl = (assetName) => {
 .project_title {
   color: #000;
 }
+/*
 .content_banner {
   filter: grayscale(100%);
 }
+*/
 .content_banner_overlay {
   display: flex;
   align-items: center;
