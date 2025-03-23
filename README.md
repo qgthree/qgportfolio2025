@@ -1,6 +1,6 @@
-# qgportfolio2025
+# qgportfolio2025 (Vue 3)
 
-Built with Vue 3 in Vite.
+All components custom built and styled. View at [quinstagram.com](https://www.quinstagram.com).
 
 ## Recommended IDE Setup
 
