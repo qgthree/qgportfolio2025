@@ -131,10 +131,12 @@ export const useProjectsStore = defineStore('projectsStore', {
         'description': '<p>As a requirement for its contract with USAID’s Bureau for Humanitarian Assistance, Credence was tasked with developing a reference tool to aid in identifying vendors available for emergency crisis response. I was asked to help conceptualize the tool and lead a team to build it. For this project, I requested one additional developer, to assist with the backend.</p><p>I began by working with the contract’s Program Director to discover requirements. To identify use cases, I also interviewed intended users. We determined the most important need was the ability to cross-reference geographic locations and service categories. A map would provide an easy interface, alongside other UI components for listing and filtering vendors.</p><p>I designed a low-fidelity mockup in Figma and worked with the client to design a database schema from sample data. After designs were approved, we moved to development. The REST API was assigned to my colleague, and I focused on the frontend. Due to familiarity, I chose Vue 3 and Leaflet as our framework and mapping library, respectively.</p>',
         'skills': ['Figma', 'Vue 3', 'Leaflet', 'JavaScript', 'HTML/CSS'],
         'links': [
+          /*
           {
             'type': 'demo',
             'url': 'https://main.d3cd0u5h9qd744.amplifyapp.com/map'
           },
+          */
           {
             'type': 'code',
             'url': 'https://github.com/qgthree/GRD'
