@@ -7,6 +7,29 @@ export const useProjectsStore = defineStore('projectsStore', {
         'role': ['designer', 'developer'],
         'user': {
           'userImage': 'qg3.jpg',
+          'username': 'Frontend Engineer'
+        },
+        'year': '2025',
+        'title': 'Portfolio Website',
+        'banner': {
+          'image': 'workdeskproject.png',
+          'alt': 'Photo of a workdesk'
+        },
+        'description': '<p>I’ve long held an interest in social media platforms—my first project as a developer was a social platform for gamers—so I figured, "Why not structure my portfolio as a social platform?" Using Vue 3, my favorite JavaScript framework, I custom-built every component. There’s nothing wrong with component libraries; I just like css. I enjoy the challenge of writing simple components with minimal code.</p><p>The site is hosted using AWS Amplify with a CD pipeline from the GitHub Repository. Have a look at the code!</p>',
+        'skills': ['Vue 3', 'Pinia', 'JavaScript', 'HTML/CSS', 'AWS'],
+        'links': [
+          {
+            'type': 'code',
+            'url': 'https://github.com/qgthree/qgportfolio2025'
+          }
+        ],
+        'id': '1',
+        'liked': false
+      },
+      {
+        'role': ['designer', 'developer'],
+        'user': {
+          'userImage': 'qg3.jpg',
           'username': 'Senior Web Developer, Macfadden'
         },
         'year': '2019',
@@ -52,7 +75,7 @@ export const useProjectsStore = defineStore('projectsStore', {
           'alt': 'Awards Planning Tool'
         },
         'description': '<p>BHA’s Nigeria Field Office desired a tool to visualize awards data, showing where in the country our partners are committed to perform, and within what sectors of engagement. This would aid the team as they plan programming for the upcoming cycle, and make it easier to observe gaps. The primary interface was envisioned as a map.</p><p>I had recently become enamoured with a web interactive presented by ESPN titled “Bron Bron Land.” The layout used a sidepanel to navigate Lebron’s various ventures in Los Angeles, with descriptions that collapsed into the sidepanel. Users could click on projects using the panel, or interact directly with a map to toggle the same project descriptions. I began to envision how I could employ a similar design for our project.</p><p>It would be easy enough from a design perspective. However, I wanted the navigation to be multi-dimensional. We would need to swap sidepanels between partners, sectors, and locations. Additionally, we would need the ability to filter awards to display only those that remained active beyond a specific date. I had fun designing two separate components for this task, and decided to include them both.</p><p>I built the frontend in Vue 2, using Leaflet as our mapping library. Because it was an internal product, I decided to use Electron to deliver the project as a desktop application. The demo provided uses sample data.</p>',
-        'skills': ['Vue 2', 'Leaflet', 'JavaScript', 'HTML/CSS'],
+        'skills': ['Vue 2', 'Leaflet', 'JavaScript', 'HTML/CSS', 'Electron'],
         'links': [
           {
             'type': 'demo',
