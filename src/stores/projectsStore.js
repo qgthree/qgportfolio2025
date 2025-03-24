@@ -138,7 +138,7 @@ export const useProjectsStore = defineStore('projectsStore', {
           },
           */
           {
-            'type': 'code',
+            'type': 'code sample',
             'url': 'https://github.com/qgthree/GRD'
           }
         ],
