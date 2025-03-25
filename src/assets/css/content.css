@@ -72,7 +72,7 @@
   grid-template-columns: 1fr 30px;
   letter-spacing: 0.5px;
   min-height: 30px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .details_left, .details_right {
@@ -105,7 +105,7 @@
 .details_right .material-symbols-outlined {
   font-variation-settings:
   'opsz' 48;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 200;
   user-select: none;
 }
@@ -114,12 +114,12 @@
   transition: all 0.2s ease;
 }
 .details_right .material-symbols-outlined:hover {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .details_right .material-symbols-outlined:active {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 .details_right .material-symbols-outlined.liked {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-variation-settings: 'FILL' 1;
 }

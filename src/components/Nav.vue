@@ -33,11 +33,11 @@
     }
       & .material-symbols-outlined {
         color: #000;
-        font-size: 28px;
+        font-size: 1.75rem;
         transition: all 0.2s ease;
       }
       & :hover > .material-symbols-outlined {
-        font-size: 38px;
+        font-size: 2.375rem;
       }
     & .router-link-active > .material-symbols-outlined {
       font-variation-settings:

@@ -31,7 +31,7 @@ defineProps({
   & .filter {
     display: inline-flex;
     padding: 5px 0px 5px 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     color: #000;
     margin-right: 30px;

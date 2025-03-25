@@ -36,15 +36,16 @@ const getImageUrl = (assetName) => {
             {{ project.title }}
           </router-link>
         </h3>
-        <router-link
-          :to="{ name: 'project', params: { id: project.id } }"
-          class="content_banner"
-          role="img"
-          :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
-          :aria-label="project.banner.alt"
-        >
-          <div class="content_banner_overlay">
-            read more
+        <router-link :to="{ name: 'project', params: { id: project.id } }">
+          <div
+            class="content_banner"
+            role="img"
+            :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
+            :aria-label="project.banner.alt"
+          >
+            <div class="content_banner_overlay">
+              learn about this project
+            </div>
           </div>
         </router-link>
         <div class="details">
@@ -80,7 +81,7 @@ const getImageUrl = (assetName) => {
   text-transform: uppercase;
   color: #fff;
   opacity: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .content_banner:hover .content_banner_overlay {

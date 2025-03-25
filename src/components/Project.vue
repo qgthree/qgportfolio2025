@@ -31,12 +31,14 @@ const getImageUrl = (assetName) => {
         </div>
         <Applink
           v-if="project.links"
-          :to="project.links[0].url"
-          class="content_banner"
-          role="img"
-          :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
-          :aria-label="project.banner.alt"
-        >
+          :to="project.links[0].url">
+          <div
+            class="content_banner"
+            role="img"
+            :style="{ backgroundImage: 'url(' + getImageUrl(project.banner.image) + ')' }"
+            :aria-label="project.banner.alt"
+          >
+          </div>
         </Applink>
         <div
           v-else

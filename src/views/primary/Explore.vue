@@ -46,7 +46,7 @@ import Nav from '@/components/Nav.vue'
       & #logo {
         display: flex;
         justify-content: center;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 200;
       }
         & a {
@@ -63,7 +63,7 @@ import Nav from '@/components/Nav.vue'
           transition: all 0.2s ease;
         }
         & span:hover {
-          font-size: 24px;
+          font-size: 1.5rem;
         }
     & footer {
       padding: 20px 25px;
