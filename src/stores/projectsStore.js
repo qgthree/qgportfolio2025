@@ -23,7 +23,7 @@ export const useProjectsStore = defineStore('projectsStore', {
             'url': 'https://github.com/qgthree/qgportfolio2025'
           }
         ],
-        'id': '1',
+        'id': '7',
         'liked': false
       },
       {
@@ -120,7 +120,7 @@ export const useProjectsStore = defineStore('projectsStore', {
         'role': ['advisor'],
         'user': {
           'userImage': 'qg3.jpg',
-          'username': 'Senior Web Development Advisor, Credence LLC'
+          'username': 'Senior Web Developer, Macfadden'
         },
         'year': '2023',
         'title': 'Center for International Disaster Information',

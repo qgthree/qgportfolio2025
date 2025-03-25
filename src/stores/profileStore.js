@@ -20,7 +20,7 @@ export const useProfileStore = defineStore('profileStore', {
           {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/quintusgreene/',
-            handle: 'linkedin.com/in/quintusgreene/',
+            handle: '/quintusgreene/',
             image: 'linkedin.svg'
           },
           {
