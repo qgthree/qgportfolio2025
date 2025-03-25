@@ -45,6 +45,10 @@
   margin-bottom: 20px;
 }
 
+.tl_item > a {
+  display: block;
+}
+
 .content_banner {
   display: block;
   cursor: pointer;
