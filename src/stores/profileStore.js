@@ -30,7 +30,7 @@ export const useProfileStore = defineStore('profileStore', {
             image: 'github-mark.svg'
           },
         ],
-        statement: 'Senior Frontend Developer & UX/UI Designer with 10+ years of experience crafting intuitive digital experiences. Adept at modern frontend technologies, minimalistic design, and user-centered solutions. Proven ability to lead cross-functional teams, optimize web applications, and drive product improvements.',
+        statement: 'Senior Frontend Engineer & UX/UI Designer with 10+ years of experience crafting intuitive digital experiences. Adept at modern frontend technologies, minimalistic design, and user-centered solutions. Proven ability to lead cross-functional teams, optimize web applications, and drive improvements.',
         skills: {
           "Frontend Development": [
             "JavaScript (ES6+)",

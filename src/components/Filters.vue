@@ -23,10 +23,17 @@ defineProps({
 <style scoped>
 .filters {
   width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
   max-width: 700px;
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  position: sticky;
+  top: -40px;
+  background-color: #fff;
+  z-index: 2;
 }
   & .filter {
     display: inline-flex;
@@ -42,7 +49,7 @@ defineProps({
     position: absolute;
     width: 100%;
     height: 1px;
-    bottom: -1px;
+    bottom: -11px;
     background-color: #000;
     visibility: hidden;
     -webkit-transform: scaleX(0);
