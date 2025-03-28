@@ -23,12 +23,13 @@ defineProps({
 <style scoped>
 .filters {
   width: 100%;
-  height: 50px;
+  height: 90px;
   display: flex;
   align-items: center;
   max-width: 700px;
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
   margin-bottom: 20px;
   position: sticky;
   top: -40px;

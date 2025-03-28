@@ -43,7 +43,7 @@ export const useProjectsStore = defineStore('projectsStore', {
         'id': '1',
         'liked': false
       },
-      /*
+
       {
         'role': ['designer', 'developer'],
         'user': {
@@ -53,15 +53,14 @@ export const useProjectsStore = defineStore('projectsStore', {
         'year': '2020',
         'title': 'U.S. Government International Authorities Database',
         'banner': {
-          'image': '',
-          'alt': ''
+          'image': 'haiti.webp',
+          'alt': 'Aid worker greets children in Haiti'
         },
-        'description': '',
+        'description': '<p>The U.S. Government International Authorities Database (USGIAD) was developed as an interagency policy reference tool, outlining which agencies have the authority to operate during international crises. Created by USAID’s Office of Foreign Disaster Assistance (OFDA), its primary goal was to establish OFDA as the lead coordinating authority for U.S. international crisis response, reducing confusion.</p><p>I joined a team of two other developers to design and build the application, which catalogs authorities, agreements, and policies, mapping their relationships to relevant organizations. We began by creating a data model and collaborated with the client to define taxonomies and relationships. I then designed UI mockups, ultimately producing a high-fidelity version that was presented to OFDA leadership and approved for development in Drupal 8.</p>',
         'skills': ['Drupal', 'JavaScript', 'HTML/CSS'],
         'id': '2',
         'liked': false
       },
-      */
       {
         'role': ['designer', 'developer'],
         'user': {
