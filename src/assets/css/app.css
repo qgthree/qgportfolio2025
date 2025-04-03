@@ -9,6 +9,28 @@
 @import "content.css";
 @import "buttons.css";
 
+@font-face {
+  font-family: founders-grotesk;
+  src: url(@/assets/fonts/FoundersGroteskWeb-Light.woff2);
+  font-weight: 200;
+}
+@font-face {
+  font-family: founders-grotesk;
+  src: url(@/assets/fonts/FoundersGroteskWeb-Regular.woff2);
+  font-weight: normal;
+}
+@font-face {
+  font-family: founders-grotesk;
+  src: url(@/assets/fonts/FoundersGroteskWeb-RegularItalic.woff2);
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: founders-grotesk;
+  src: url(@/assets/fonts/FoundersGroteskWeb-Semibold.woff2);
+  font-weight: 600;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -44,42 +66,34 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'founders-grotesk', sans-serif;
 }
-
 h1 {
+  font-size: 3rem;
+}
+h2 {
   font-size: 2.25rem;
 }
-
-h2 {
+h3 {
   font-size: 1.75rem;
 }
-
-h3 {
-  font-size: 1.5rem;
-}
-
 h4 {
   font-size: 1.25rem;
 }
-
 h5 {
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-
 p {
   line-height: 1.5;
   margin-bottom: 15px;
   color: rgb(0, 0, 0, 0.83);
 }
-
 a {
   text-decoration: none;
   color: #5742f5;
 }
-
 ul {
   padding-inline-start: 4%;
 }
@@ -93,24 +107,24 @@ li::marker {
   color: rgb(0, 0, 0, 0.83);
 }
 
+/* standard custom classes */
+
 .lighter {
   font-weight: 200;
 }
 
 /* transitions */
+
 .slide-up-enter-active {
   transition: all 0.25s;
 }
-
 .slide-up-leave-active {
   transition: all 0.125s;
 }
-
 .slide-up-enter-from {
   opacity: 0;
   transform: translateY(30px);
 }
-
 .slide-up-leave-to {
   opacity: 0;
   transform: translateY(-30px);
@@ -122,19 +136,15 @@ li::marker {
 .slide-leave-active {
   transition: transform 0.2s;
 }
-
 .slide-enter-from {
   transform: translateX(-100%);
 }
-
 .slide-enter-to {
   transform: translateX(0);
 }
-
 .slide-leave-from {
   transform: translateX(0);
 }
-
 .slide-leave-to {
   transform: translateX(100%);
 }
