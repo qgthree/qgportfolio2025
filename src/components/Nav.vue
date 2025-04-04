@@ -5,9 +5,11 @@
   <RouterLink :to="{ name: 'projects'}" class="tooltip" data-text="projects">
     <span class="material-symbols-outlined">featured_play_list</span>
   </RouterLink>
-  <RouterLink to="/thoughts" class="tooltip" data-text="thoughts">
-    <span class="material-symbols-outlined">neurology</span>
-  </RouterLink>
+  <!--
+    <RouterLink to="/thoughts" class="tooltip" data-text="thoughts">
+      <span class="material-symbols-outlined">neurology</span>
+    </RouterLink>
+  -->
   <RouterLink to="/profile" class="tooltip" data-text="profile">
     <span class="material-symbols-outlined">account_circle</span>
   </RouterLink>
@@ -46,7 +48,7 @@
   @media screen and (max-width: 800px) {
     #nav {
       width: 100%;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

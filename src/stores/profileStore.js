@@ -38,7 +38,9 @@ export const useProfileStore = defineStore('profileStore', {
             "HTML/CSS",
             "Vue.js",
             "React",
+            "Angular",
             "Chart.js",
+            "D3",
             "Leaflet",
             "Component Libraries"
           ],
