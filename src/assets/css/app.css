@@ -11,23 +11,23 @@
 
 @font-face {
   font-family: founders-grotesk;
-  src: url(@/assets/fonts/FoundersGroteskWeb-Light.woff2);
+  src: url(https://qgportfolioassets.s3.us-east-2.amazonaws.com/FoundersGroteskWeb-Light.woff2);
   font-weight: 200;
 }
 @font-face {
   font-family: founders-grotesk;
-  src: url(@/assets/fonts/FoundersGroteskWeb-Regular.woff2);
+  src: url(https://qgportfolioassets.s3.us-east-2.amazonaws.com/FoundersGroteskWeb-Regular.woff2);
   font-weight: normal;
 }
 @font-face {
   font-family: founders-grotesk;
-  src: url(@/assets/fonts/FoundersGroteskWeb-RegularItalic.woff2);
+  src: url(https://qgportfolioassets.s3.us-east-2.amazonaws.com/FoundersGroteskWeb-RegularItalic.woff2);
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: founders-grotesk;
-  src: url(@/assets/fonts/FoundersGroteskWeb-Semibold.woff2);
+  src: url(https://qgportfolioassets.s3.us-east-2.amazonaws.com/FoundersGroteskWeb-Semibold.woff2);
   font-weight: 600;
 }
 
