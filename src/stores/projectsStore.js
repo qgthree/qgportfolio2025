@@ -4,7 +4,7 @@ export const useProjectsStore = defineStore('projectsStore', {
   state: () => ({
     projects: [
       {
-        'role': ['designer', 'developer'],
+        'role': ['developer'],
         'user': {
           'userImage': 'qg3.jpg',
           'username': 'Frontend Engineer'
